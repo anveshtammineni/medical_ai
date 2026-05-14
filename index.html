@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical AI Diagnosis</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Diagnostician</h1>
+            <p class="subtitle">Select your symptoms for an intelligent analysis</p>
+        </header>
+
+        <form id="symptom-form">
+            <div class="symptoms-group">
+                <label class="checkbox-wrapper">
+                    <input type="checkbox" id="fever" name="fever">
+                    <div class="custom-checkbox">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <span class="label-text">Fever</span>
+                </label>
+
+                <label class="checkbox-wrapper">
+                    <input type="checkbox" id="headache" name="headache">
+                    <div class="custom-checkbox">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <span class="label-text">Headache</span>
+                </label>
+
+                <label class="checkbox-wrapper">
+                    <input type="checkbox" id="chills" name="chills">
+                    <div class="custom-checkbox">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <span class="label-text">Chills</span>
+                </label>
+            </div>
+
+            <button type="submit" class="analyze-btn">
+                <span id="btn-text">Analyze Symptoms</span>
+                <div class="loader" id="btn-loader"></div>
+            </button>
+        </form>
+
+        <div class="results-panel" id="results">
+            <div class="result-item">
+                <div class="result-label">
+                    <span>Flu Probability</span>
+                    <span id="flu-val">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill flu-fill" id="flu-bar"></div>
+                </div>
+            </div>
+
+            <div class="result-item">
+                <div class="result-label">
+                    <span>Malaria Probability</span>
+                    <span id="malaria-val">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill malaria-fill" id="malaria-bar"></div>
+                </div>
+            </div>
+
+            <p class="disclaimer">⚠️ This tool is for educational purposes only and does not provide medical advice.</p>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
